@@ -1,0 +1,30 @@
+h1 {
+  background: pink;
+}
+
+#header {
+  background: yellow;
+}
+
+.product-block {
+  background: rgb(192, 255, 214);
+}
+
+.product-block--pink-modifier {
+  background: pink;
+}
+
+.product-block__discount-el {
+  background: #e97171;
+}
+
+/* .product-block {
+  &--pink-modifier {
+    background: pink;
+  }
+
+  &__discount-el {
+    background: #e97171;
+  }
+}
+ */

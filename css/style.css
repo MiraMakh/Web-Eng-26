@@ -1,13 +1,73 @@
-h1 {
-  background: pink;
+/* global */
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+/* End of global */
+/* Home */
+
+/* 
+•	background-color
+•	background-image
+•	background-repeat
+•	background-attachment
+•	background-position
+•	background-size
+
+*/
+
+#header h1 a {
+  display: inline-block;
+  width: 185px;
+  height: 41px;
+  background-color: rgb(255, 58, 91);
+  background-image: url(../images/furniro.png);
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-x;
+  background-repeat: repeat-y; */
+  background-position: center center;
+  /* background-position: left bottom;
+  background-position: 150px 20%; */
+  background-size: cover;
+  /* background-size: contain;
+  background-size: 100% 10px;
+  background-size: 150px auto; */
+  background: url(../images/furniro.png) no-repeat center center;
+  background: cover;
+  text-indent: -99999px;
 }
 
-#header {
-  background: yellow;
+/* #header ul li {
+  list-style-type: decimal;
+  list-style-type: square;
+  list-style-type: disc;
+  list-style-type: circle;
+  list-style-position: inside ;
+} */
+
+#header ul li a {
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: capitalize;
 }
+
+#header ul li a:hover {
+  color: #7f0000;
+  background-color: blue;
+}
+
+/* #RRGGBB
+#RGB */
 
 .product-block {
-  background: rgb(192, 255, 214);
+  background: #f4f5f7;
+  background: rgb(0, 0, 0); /* 0-255 */
+  background: rgb(255, 255, 255);
+  background: rgb(255, 22, 22, 0.5); /* 0-1 */
+  background: rgb(255, 22, 22, 0.5); /* 0-1 */
 }
 
 .product-block--pink-modifier {
@@ -28,3 +88,42 @@ h1 {
   }
 }
  */
+
+/* 
+•	font-style
+ */
+
+.product-block .product-block__title-el {
+  color: #3a3a3a;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+  /* text-decoration: underline;
+  text-decoration: line-through; */
+  /*  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase; */
+  /* font-style: italic; */
+}
+
+/* End of Home */
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  /* border-left: 1px solid #000;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #000;
+  border-left-width: ;
+  border-left-color: ;
+  border-left-style: ; */
+  border-collapse: collapse;
+  vertical-align: middle
+}

@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap");
 /* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
 }
@@ -18,10 +25,87 @@ li {
 
 */
 
+@font-face {
+  font-family: "ALK Life";
+  src: url("../fonts/alk-life-webfont.eot"); /* IE9 Compat Modes */
+  src:
+    url("../fonts/alk-life-webfont.woff") format("woff"),
+    url("../fonts/alk-life-webfont.ttf") format("truetype"),
+    url("../fonts/alk-life-webfont.svg#alk_liferegular") format("svg");
+}
+
+#header {
+  width: 100%;
+  /* height: 25px; */
+  overflow: hidden;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+  background: pink;
+  position: absolute;
+  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0;*/
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 251, 255);
+}
+
+#header h1 {
+  width: 200px;
+  float: left;
+  background: #71e9b1;
+  margin: 0; /* top,right, bottom, let */
+  margin: 50px 30px; /* top/bottom left/right */
+  margin: 20px 20px 10px 5px; /* top->right->bottom->lfet */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0; /* top,right, bottom, let */
+  padding: 50px 30px; /* top/bottom left/right */
+  padding: 20px 20px 10px 5px; /* top->right->bottom->lfet */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*  border-width: 20px;
+  border-style: solid;
+  border-style: double;
+  border-color: green; */
+  border: 10px solid blue;
+  border-left-width: 20px;
+  border-left-style: dashed;
+  border-left-color: yellow;
+  border-radius: 50%; /* top,right, bottom, let */
+  border-radius: 20px 10px;
+  border-radius: 20px 10px 20px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 60px;
+  /* 10.	box-shadow: offset-x offset-y blur-radius spread-radius color; */
+  box-shadow: 10px 60px 60px #000;
+  box-shadow: -10px -60px 60px #000;
+  box-shadow: 0px 0px 60px #000;
+  box-shadow:
+    inset 0px 0px 60px #9704ff,
+    0px 0px 60px #000;
+}
+
 #header h1 a {
   display: inline-block;
   width: 185px;
+
   height: 41px;
+  /* margin: 50px;
+  padding: 50px; */
   background-color: rgb(255, 58, 91);
   background-image: url(../images/furniro.png);
   background-repeat: no-repeat;
@@ -34,7 +118,8 @@ li {
   /* background-size: contain;
   background-size: 100% 10px;
   background-size: 150px auto; */
-  background: url(../images/furniro.png) no-repeat center center;
+  background: rgb(255, 58, 91) url(../images/furniro.png) no-repeat center
+    center;
   background: cover;
   text-indent: -99999px;
 }
@@ -47,7 +132,7 @@ li {
   list-style-position: inside ;
 } */
 
-#header ul li a {
+/* #header ul li a {
   color: #000;
   font-size: 16px;
   line-height: 1;
@@ -57,12 +142,91 @@ li {
 #header ul li a:hover {
   color: #7f0000;
   background-color: blue;
+} */
+
+.main-nav {
+  float: right;
+  background: #f4f5f7;
+}
+
+.main-nav .main-nav__list > li {
+  display: inline;
+  display: block;
+  display: none;
+  display: inline-block;
+  visibility: hidden;
+  visibility: visible;
+  margin-left: 34px;
+  margin-right: 34px;
+  position: relative;
+}
+.main-nav .main-nav__list > li ul {
+  display: none;
+}
+.main-nav .main-nav__list > li:hover ul {
+  display: block;
+  width: 200px;
+  position: absolute;
+  background: white;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px #000;
+}
+
+.main-nav .main-nav__list > li::before {
+  content: "*";
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #71e9b1;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 35%;
+  bottom: -10px;
+}
+/* .main-nav .main-nav__list li::after{
+  content: '*';
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #71e9b1;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 35%;
+  bottom: -10px;
+} */
+
+.main-nav .main-nav__list > li a {
+  display: inline-block;
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: capitalize;
+  font-family: "ALK Life", Arial;
+  font-family: "Tagesschrift", system-ui;
+  position: relative;
+  z-index: 3;
+}
+
+.main-nav .main-nav__list > li a:first-letter {
+  font-weight: bold;
+  color: red;
+}
+.main-nav .main-nav__list > li a:first-line {
+  background: #71e9b1;
+}
+
+.main-nav .main-nav__list li a:hover {
+  color: fuchsia;
 }
 
 /* #RRGGBB
 #RGB */
 
 .product-block {
+  position: relative;
   background: #f4f5f7;
   background: rgb(0, 0, 0); /* 0-255 */
   background: rgb(255, 255, 255);
@@ -75,9 +239,17 @@ li {
 }
 
 .product-block__discount-el {
+  position: absolute;
+  top: 50px;
+  left: 5%;
   background: #e97171;
 }
 
+.product-block__discount-el--more {
+  z-index: 3;
+  left: 7%;
+  background-color: aqua;
+}
 /* .product-block {
   &--pink-modifier {
     background: pink;
@@ -125,5 +297,5 @@ td {
   border-left-color: ;
   border-left-style: ; */
   border-collapse: collapse;
-  vertical-align: middle
+  vertical-align: middle;
 }

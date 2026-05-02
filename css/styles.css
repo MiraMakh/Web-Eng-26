@@ -1,0 +1,473 @@
+@charset "UTF-8";
+/* @use "variables"; */
+/* https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass */
+/* global */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+:root {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "ALK Life";
+  src: url("../fonts/alk-life-webfont.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/alk-life-webfont.woff2") format("woff2"), url("../fonts/alk-life-webfont.woff") format("woff"), url("../fonts/alk-life-webfont.ttf") format("truetype");
+}
+/* End of global */
+/* Home */
+/* 
+•	background-color
+•	background-image
+•	background-repeat
+•	background-attachment
+•	background-position
+•	background-size
+
+*/
+#header h1 a {
+  display: inline-block;
+  width: 185px;
+  height: 41px;
+  background-color: #B88E2F;
+  background-image: url(../images/furniro.png);
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-x;
+  background-repeat: repeat-y; */
+  background-position: center center;
+  /* background-position: left bottom;
+  background-position: 150px 20%; */
+  background-size: cover;
+  /* background-size: contain;
+  background-size: 100% 10px;
+  background-size: 150px auto; */
+  background: url(../images/furniro.png) no-repeat center center;
+  background: cover;
+  text-indent: -99999px;
+}
+
+/* #header ul li {
+  list-style-type: decimal;
+  list-style-type: square;
+  list-style-type: disc;
+  list-style-type: circle;
+  list-style-position: inside ;
+} */
+#header ul li a {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: "arial";
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+#header ul li a:hover {
+  color: #7f0000;
+  background-color: blue;
+}
+
+nav ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -5px;
+  left: 40%;
+  /* background: green; */
+  transform: rotate(45deg);
+  z-index: 1;
+  border-left: 1px solid rgb(53, 0, 128);
+  border-top: 1px solid rgb(53, 0, 128);
+}
+
+nav ul li a:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -5px;
+  left: 40%;
+  /* background: green; */
+  transform: rotate(45deg);
+  z-index: 1;
+  border-right: 1px solid green;
+  border-bottom: 1px solid green;
+}
+
+nav > ul > li > a::first-letter {
+  font-weight: bold;
+  color: red;
+}
+
+nav > ul > li > a::first-line {
+  background: green;
+}
+
+/* #RRGGBB
+#RGB */
+.product-block {
+  width: 41.6666666667%; /* 600 */
+  background: #f4f5f7;
+  background: rgb(0, 0, 0); /* 0-255 */
+  background: rgb(255, 255, 255);
+  background: rgba(255, 22, 22, 0.5); /* 0-1 */
+  background: rgba(255, 22, 22, 0.5); /* 0-1 */
+}
+.product-block--pink-modifier {
+  background: pink;
+}
+.product-block__discount-el {
+  background: #e97171;
+}
+.product-block__title-el {
+  color: #3a3a3a;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+  /* text-decoration: underline;
+  text-decoration: line-through; */
+  /*  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase; */
+  /* font-style: italic; */
+}
+
+/* End of Home */
+table,
+th,
+td {
+  border: 1px solid #000;
+  /* border-left: 1px solid #000;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #000;
+  border-left-width: ;
+  border-left-color: ;
+  border-left-style: ; */
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+/* transform */
+.line {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.original,
+.box {
+  border-radius: 6px;
+}
+
+.original {
+  background: #eaeaed;
+  border: 1px solid #cecfd5;
+  float: left;
+  margin: 50px 50px;
+}
+
+/*li:first-child {}
+li:last-child {} 
+li:only-child {} 
+li:nth-child(2) {}
+li:nth-child(odd) {} 
+li:nth-child(even) {}  
+ */
+/* .original:first-of-type {
+  //first-child
+  background: pink;
+} */
+/* .original:last-of-type {
+  //last-child
+  background: rgb(255, 1, 43);
+}
+.original:nth-of-type(2) {
+  //last-child
+  background: rgb(170, 1, 255);
+} */
+/* .original:nth-of-type(2n) {
+  //last-child
+  background: rgb(170, 1, 255);
+} */
+/* .original:nth-of-type(2n+1) {
+  //last-child
+  background: rgb(170, 1, 255);
+} */
+/* .original:nth-of-type(3n+3) {
+  //last-child
+  background: rgb(170, 1, 255);
+} */
+/*
+attribute selector
+[attribute] - has attribute
+[attribute="value"]  - exact value
+[attribute^="value"]  - start value with
+[attribute$="value"]  - ends value with
+[attribute*="value"]  - contains value
+ */
+.box {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background: #2db34a;
+  text-align: center;
+  margin: 50px 50px;
+}
+
+/* .box[title^="m"] {
+  background: #7f0000;
+}
+.box[title*="k"] {
+  background: #003d7f;
+} */
+/**/
+.box-1:hover {
+  transform: rotate(20deg);
+}
+
+.box-2:hover {
+  transform: rotate(-20deg);
+}
+
+.box-rotate {
+  transform: rotate(45deg);
+}
+
+.box-rotate span {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+/**/
+.box-3:hover {
+  /*transform:scale(-0.75);*/
+  transform: scale(0.75);
+}
+
+.box-4:hover {
+  transform: scale(1.75);
+}
+
+/**/
+.box-5:hover {
+  transform: translateX(-10px);
+}
+
+.box-6:hover {
+  transform: translateY(25%);
+}
+
+.box-7:hover {
+  transform: translate(-10px, 25%);
+}
+
+/**/
+.box-8:hover {
+  transform: skewX(-5deg);
+}
+
+.box-9:hover {
+  transform: skewY(-25deg);
+}
+
+.box-10:hover {
+  transform: skew(5deg, -25deg);
+}
+
+.box-skew {
+  transform: skewX(10deg);
+}
+
+.box-skew span {
+  display: inline-block;
+  transform: skewX(-10deg);
+}
+
+/**/
+.box-11:hover {
+  transform: rotate(25deg) scale(0.75);
+}
+
+.box-12:hover {
+  transform: skew(5deg, -25deg) translate(20px);
+}
+
+.box {
+  background: #2db34a;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+  background: red;
+  background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+
+.box-1 {
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+  background: linear-gradient(-65deg, red, blue); /* Standard syntax */
+}
+
+.box-2 {
+  background: linear-gradient(to right, red 70%, blue); /* Standard syntax */
+}
+
+.box-3 {
+  /* background: linear-gradient(to bottom right, silver , pink); */ /* Standard syntax */
+}
+
+.box-4 {
+  /* background: linear-gradient(to left top, silver , pink); */ /* Standard syntax */
+}
+
+/* 
+circle / ellipse
+closest-side 
+farthest-side
+closest-corner
+farthest-corner
+ */
+.box-5 {
+  /* background: radial-gradient(red, green, blue); */ /* Standard syntax */
+  /* background-image: radial-gradient(circle, red, yellow, green); */ /*circle or ellipse*/
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+  background-image: radial-gradient(closest-side at 60% 55%, red, green, blue);
+}
+
+/* transition */
+.transitions {
+  width: 100%;
+  height: 100%;
+  border: 1px solid yellow;
+  background: green;
+}
+
+.transitions div {
+  width: 100px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 6px;
+  background: #d10000;
+}
+
+.transitions:hover div {
+  width: 850px;
+  color: yellow;
+}
+
+.transitions div.ease {
+  transition: all 3s ease 5s;
+  /* s/ms */
+  /*transition-delay: 3s; 
+  transition-duration: 3s;
+  transition-property: all;
+  transition-timing-function: ease;*/
+}
+
+.transitions div.linear {
+  transition: all 8s linear 0s;
+}
+
+.transitions div.easein {
+  transition: all 13s ease-in 1s;
+}
+
+.transitions div.easeout {
+  transition: all 15s ease-out 2s;
+}
+
+.transitions div.easeinout {
+  transition: all 3s ease-in-out 5s;
+}
+
+/* animations */
+.animations,
+.animations > .box {
+  border-radius: 6px;
+}
+
+.animations {
+  width: 50%;
+  height: 500px;
+  background: #eaeaed;
+  border: 1px solid #cecfd5;
+  margin: 150px auto;
+}
+
+.box {
+  display: block;
+  width: 60%;
+  height: 350px;
+  line-height: 350px;
+  text-align: center;
+  margin: 75px auto;
+  background: #2db34a;
+  /*opacity: 0;
+  animation*/
+  animation-name: myAnimation2;
+  animation-name: myAnimation1;
+  animation-duration: 2s; /* s/ms */
+  animation-delay: 0s; /* s/ms */
+  animation-iteration-count: infinite; /*infinite/1,2...n  */
+  animation-direction: alternate; /* reverse,alternate,alternate-reverse */
+  animation-timing-function: linear; /* ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n) */
+  animation-fill-mode: forwards; /* forwards, backwards, both */
+}
+
+@keyframes myAnimation1 {
+  from {
+    transform: rotate(0deg);
+    background: pink;
+  }
+  to {
+    transform: rotate(360deg);
+    background: linear-gradient(to left top, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+@keyframes myAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+    background: #000;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+    background: yellow;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes myAnimation3 {
+  0% {
+    background: pink;
+  }
+  100% {
+    background: yellow;
+  }
+}/*# sourceMappingURL=styles.css.map */

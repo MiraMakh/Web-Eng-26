@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <!-- <style>
       h1{
         background: pink;
@@ -22,7 +21,26 @@
     </style> -->
   </head>
   <body>
-    <!-- 
+    <header id="header" class="header">
+      <!-- style="background: pink; width: 100%" -->
+      <div class="center">
+        <h1>
+          <a href="index.html"> furniro</a>
+        </h1>
+        <nav class="mainMenu" id="nav">
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contac</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- 
     input type
     •	text 
 •	password 
@@ -46,32 +64,90 @@
 •	file 
 
     -->
-    <header id="header" class="header">
-      <!-- style="background: pink; width: 100%" -->
-      <div class="center">
-        <h1>
-          <a href="index.html"> furniro</a>
-        </h1>
-        <nav class="mainMenu">
-          <ul>
-            <li><a href="index.html">მთავარი</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">services</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contac</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="center container">
+      <form>
+        <fieldset>
+          <legend>personal info</legend>
+          <h2>Personal info</h2>
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            id="firstName"
+            name="firstName"
+          />
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            placeholder="Enter Last Name"
+            id="lastNamee"
+            name="lastName"
+          />
+
+          <!-- <label>
+            First Name
+            <input type="text" placeholder="Enter First Name" name="firstName"
+          /></label> -->
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>education</legend>
+          <h2>Education</h2>
+          <label>Choose you degree</label>
+          <label for="bach">bach</label>
+          <input type="checkbox" name="degree" id="bach" value="bach" />
+          <label for="magiste">magiste</label>
+          <input type="checkbox" name="degree" id="magiste" value="magister" />
+          <label for="PHD">magiste</label>
+          <input type="checkbox" name="degree" id="PHD" value="PHD" /> <br />
+          <label>Choose you status right now</label>
+          <label for="bach1">bach</label>
+          <input type="radio" name="degree1" id="bach1" value="bach" />
+          <label for="magiste1">magiste</label>
+          <input type="radio" name="degree1" id="magiste1" value="magister" />
+          <label for="PHD1">magiste</label>
+          <input type="radio" name="degree1" id="PHD1" value="PHD" /> <br />
+          <label for="notStudent">I am not student right now</label>
+          <input
+            type="radio"
+            name="degree1"
+            id="notStudent"
+            value="not student"
+          />
+          <input type="file" />
+          <br />
+          <fieldset>
+            <legend>user</legend>
+            <h2>User</h2>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+            <textarea placeholder="enter you thought or comment"> </textarea>
+            <input type="reset" value="reset data" />
+            <input type="submit" value="send" />
+            <button>send</button>
+            <input type="search" placeholder="search" />
+          </fieldset>
+        </fieldset>
+      </form>
+      <!-- <section class="center container">
         <div class="item item--1">item 1</div>
         <div class="item item--2">item 2</div>
         <div class="item item--3">item 3</div>
         <div class="item item--4">item 4</div>
         <div class="item item--5">item 5</div>
-      </section>
+      </section> -->
 
       <!-- <section class="center container-grid">
         <div class="item item--1">header</div>
@@ -82,5 +158,6 @@
       </section> -->
     </main>
     <footer class="center" id="footer">footer</footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

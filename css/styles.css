@@ -19,6 +19,14 @@ li {
   src: url("../fonts/alk-life-webfont.eot"); /* IE9 Compat Modes */
   src: url("../fonts/alk-life-webfont.woff2") format("woff2"), url("../fonts/alk-life-webfont.woff") format("woff"), url("../fonts/alk-life-webfont.ttf") format("truetype");
 }
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: none;
+}
+
 /* End of global */
 /* Home */
 /* 
@@ -121,6 +129,12 @@ nav > ul > li > a::first-line {
   background: rgb(255, 255, 255);
   background: rgba(255, 22, 22, 0.5); /* 0-1 */
   background: rgba(255, 22, 22, 0.5); /* 0-1 */
+}
+@media screen and (max-width: 768px) {
+  .product-block {
+    padding: 5px 0;
+    gap: 10px;
+  }
 }
 .product-block--pink-modifier {
   background: pink;
@@ -605,46 +619,35 @@ Flex Items - flex-grow, flex-shrink, flex-basis, order
 }
 
 body {
-  background: pink;
+  /* background: pink; */
   /* desktop first */
-}
-@media screen and (max-width: 1366px) {
-  body {
+  /* @media screen and (max-width: 1366px) {
     background: #7f0000;
   }
-}
-@media screen and (max-width: 768px) {
-  body {
+
+  @media screen and (max-width: 768px) {
     background: #0b007f;
   }
-}
-@media screen and (max-width: 480px) {
-  body {
+
+  @media screen and (max-width: 480px) {
     background: #9a1f3c;
-  }
-}
-body {
+  } */
   /* mobile first */
-}
-@media screen and (min-width: 360px) {
-  body {
+  /* @media screen and (min-width: 360px) {
     background: #9a1f3c;
   }
-}
-@media screen and (max-width: 480px) {
-  body {
+
+  @media screen and (max-width: 480px) {
     background: #0b007f;
   }
-}
-@media screen and (min-width: 768px) {
-  body {
+
+  @media screen and (min-width: 768px) {
     background: #7f0000;
   }
-}
-@media screen and (min-width: 1366px) {
-  body {
+
+  @media screen and (min-width: 1366px) {
     background: pink;
-  }
+  } */
 }
 
 /* Exact width */
@@ -757,4 +760,11 @@ body {
   .original {
     background: rgb(108, 0, 129);
   }
+}
+/* forms */
+input, textarea {
+  display: inline-block;
+  border: 2px solid #d10000;
+  background: none;
+  outline: none;
 }/*# sourceMappingURL=styles.css.map */
